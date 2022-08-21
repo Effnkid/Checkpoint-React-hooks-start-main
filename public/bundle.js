@@ -2624,9 +2624,11 @@ var Root = function Root() {
         return _ref.apply(this, arguments);
       };
     }();
-  });
+
+    data();
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Adoption Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_PetList__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    pets: _petdata__WEBPACK_IMPORTED_MODULE_3__["default"]
+    pets: pets
   }));
 };
 

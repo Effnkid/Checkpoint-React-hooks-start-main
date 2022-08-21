@@ -15,13 +15,13 @@ const Root = () => {
       const pets = await axios('/api/pets');
       setPets(pets.data);
     };
-  });
+    data();
+  }, []);
 
   return (
     <>
-      {/* {console.log(data)} */}
       <h1>Adoption Center</h1>
-      <PetList pets={samplePets} />
+      <PetList pets={pets} />
     </>
   );
 };
