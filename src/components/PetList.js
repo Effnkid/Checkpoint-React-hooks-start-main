@@ -14,19 +14,18 @@ function PetList(props) {
   const [isSelected, setSelected] = React.useState('all');
   const [list, setList] = React.useState(props.pets);
 
-  // React.useEffect(() => {
-  //   if (isSelected === 'all') {
-  //     setList(props.pets);
-  //   } else {
-  //     const temp = props.pets.filter((ele) => {
-  //       return ele.species === isSelected;
-  //     });
-  //     setList(temp);
-  //   }
-  // }, [isSelected]);
+  React.useEffect(() => {
+    if (isSelected === 'all') {
+      setList(props.pets);
+    } else {
+      const temp = props.pets.filter((ele) => {
+        return ele.species === isSelected;
+      });
+      setList(temp);
+    }
+  }, [isSelected]);
   const handleChange = (event) => {
     setSelected(event.target.value);
-    const renderChange = () => {};
   };
 
   return (
